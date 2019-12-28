@@ -1,15 +1,6 @@
 package com.mumfrey.worldeditcui.event;
 
-import com.mumfrey.worldeditcui.event.cui.CUIEventBounds;
-import com.mumfrey.worldeditcui.event.cui.CUIEventColour;
-import com.mumfrey.worldeditcui.event.cui.CUIEventCylinder;
-import com.mumfrey.worldeditcui.event.cui.CUIEventEllipsoid;
-import com.mumfrey.worldeditcui.event.cui.CUIEventGrid;
-import com.mumfrey.worldeditcui.event.cui.CUIEventPoint2D;
-import com.mumfrey.worldeditcui.event.cui.CUIEventPoint3D;
-import com.mumfrey.worldeditcui.event.cui.CUIEventPolygon;
-import com.mumfrey.worldeditcui.event.cui.CUIEventSelection;
-import com.mumfrey.worldeditcui.event.cui.CUIEventUpdate;
+import com.mumfrey.worldeditcui.event.cui.*;
 
 /**
  * Event type enum for CUI events. Also stores class, arguments, and key for each value.
@@ -28,7 +19,8 @@ public enum CUIEventType
 	UPDATE   (CUIEventUpdate.class,    "u",    1    ),
 	POLYGON  (CUIEventPolygon.class,   "poly", 3, 99),
 	COLOUR   (CUIEventColour.class,    "col",  4    ),
-	GRID     (CUIEventGrid.class,      "grid", 1, 2 );
+	GRID     (CUIEventGrid.class,      "grid", 1, 2 ),
+	CLIPBOARD(CUIEventClipboard.class, "c", 6, 7);
 	
 	private final Class<? extends CUIEvent> eventClass;
 	private final String key;

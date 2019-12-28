@@ -6,6 +6,7 @@ import com.mumfrey.worldeditcui.event.CUIEventDispatcher;
 import com.mumfrey.worldeditcui.exceptions.InitialisationException;
 import com.mumfrey.worldeditcui.render.CUISelectionProvider;
 import com.mumfrey.worldeditcui.render.ConfiguredColour;
+import com.mumfrey.worldeditcui.render.clipboard.Clipboard;
 import com.mumfrey.worldeditcui.render.region.CuboidRegion;
 import com.mumfrey.worldeditcui.render.region.Region;
 import com.mumfrey.worldeditcui.render.shapes.RenderChunkBoundary;
@@ -33,6 +34,7 @@ public class WorldEditCUI
 	
 	private final Map<UUID, Region> regions = new LinkedHashMap<UUID, Region>();
 	private Region selection, activeRegion;
+	private Clipboard clipboard;
 	private CUIDebug debugger;
 	private CUIConfiguration configuration;
 	private CUIEventDispatcher dispatcher;
@@ -43,6 +45,7 @@ public class WorldEditCUI
 	public void initialise(MinecraftClient minecraft)
 	{
 		this.selection = new CuboidRegion(this);
+		this.clipboard = new Clipboard();
 		this.configuration = CUIConfiguration.create();
 		this.debugger = new CUIDebug(this);
 		this.dispatcher = new CUIEventDispatcher(this);
@@ -105,6 +108,10 @@ public class WorldEditCUI
 	public Region getSelection(boolean multi)
 	{
 		return multi ? this.activeRegion : this.selection;
+	}
+
+	public Clipboard getClipboard() {
+		return clipboard;
 	}
 	
 	public void setSelection(UUID id, Region region)
