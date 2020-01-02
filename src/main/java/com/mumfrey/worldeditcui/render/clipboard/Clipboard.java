@@ -33,7 +33,7 @@ public class Clipboard {
         Vector3 max = min.add(dimensions);
 
         if(this.outline == null) {
-            this.outline = new Render3DBox(ConfiguredColour.CUBOIDBOX.style(), min, max);
+            this.outline = new Render3DBox(ConfiguredColour.CLIPBOARDGRID.style(), min, max);
         }
         else this.outline.setPosition(min, max);
 

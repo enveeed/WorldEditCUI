@@ -31,7 +31,9 @@ public enum ConfiguredColour
 	CYLINDERBOX    ("cylinderedge",   new Colour("#CC4C4CCC")),
 	CYLINDERCENTRE ("cylinderpoint",  new Colour("#CC33CCCC")),
 	CHUNKBOUNDARY  ("chunkboundary",  new Colour("#33CC33CC")),
-	CHUNKGRID      ("chunkgrid",      new Colour("#4CCCAA99"));
+	CHUNKGRID      ("chunkgrid",      new Colour("#4CCCAA99")),
+	CLIPBOARDGRID  ("clipboardgrid",  new Colour("#3BCCCC99")),
+	CLIPBOARDTINT  ("clipboardtint",  new Colour("#3BCCCC55"));
 	
 	class Style implements RenderStyle
 	{

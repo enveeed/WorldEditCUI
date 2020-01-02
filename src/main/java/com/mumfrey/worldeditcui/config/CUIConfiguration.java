@@ -45,6 +45,8 @@ public final class CUIConfiguration implements InitialisationFactory
 	@Expose private Colour cylinderPointColor     = ConfiguredColour.CYLINDERCENTRE.getDefault();
 	@Expose private Colour chunkBoundaryColour    = ConfiguredColour.CHUNKBOUNDARY.getDefault();
 	@Expose private Colour chunkGridColour        = ConfiguredColour.CHUNKGRID.getDefault();
+	@Expose private Colour clipboardGridColour	  = ConfiguredColour.CLIPBOARDGRID.getDefault();
+	@Expose private Colour clipboardTintColour    = ConfiguredColour.CLIPBOARDTINT.getDefault();
 	
 	/**
 	 * Copies the default config file to the proper directory if it does not

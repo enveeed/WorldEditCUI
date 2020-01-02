@@ -53,8 +53,9 @@ public class CUIListenerWorldRender
 			try
 			{
 				Vector3 cameraPos = new Vector3(this.minecraft.gameRenderer.getCamera().getPos());
+				Vector3 playerPos = new Vector3(this.minecraft.player.getPos());
 				GlStateManager.color4f(1.0F, 1.0F, 1.0F, 0.5F);
-				this.controller.renderSelections(cameraPos, partialTicks);
+				this.controller.renderSelections(cameraPos, playerPos, partialTicks);
 			}
 			catch (Exception e)
 			{
